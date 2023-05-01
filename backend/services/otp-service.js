@@ -14,14 +14,14 @@ class OtpService{
         return otp;
     }
 
-    async sendBySms(phone, otp){
-        return await twilio.messages.create({
+    // async sendBySms(phone, otp){
+    //     return await twilio.messages.create({
 
-            to: phone,
-            from: process.env.SMS_FROM_NUMBER,
-            body: `Your MicroPod OTP is ${otp}`,
-        });
-    }
+    //         to: phone,
+    //         from: process.env.SMS_FROM_NUMBER,
+    //         body: `Your MicroPod OTP is ${otp}`,
+    //     });
+    // }
 
     verifyOtp(hashedOtp, data){
 
